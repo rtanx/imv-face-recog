@@ -122,6 +122,7 @@ Untuk melakukan pengukuran performa pada model YOLOv8, terdapat beberapa metrik 
 
 - Mean Average Precision (mAP): Metrik ini digunakan untuk mengukur akurasi model dalam memprediksi lokasi objek secara tepat. mAP dihitung dengan memperhitungkan nilai IOU (Intersection over Union) antara prediksi dan ground truth pada berbagai threshold IOU yang berbeda. Secara matematis mAP dapat dinyatakan sebagai berikut:
 
+
 $$ m A P=\frac{1}{C} \sum_{c=1}^C A P_c $$
 
 dengan
