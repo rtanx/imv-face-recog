@@ -121,6 +121,7 @@ Untuk melakukan pengukuran performa pada model YOLOv8, terdapat beberapa metrik 
 - F1-score: Metrik ini merupakan perpaduan antara precision dan recall, dan dapat digunakan untuk mengukur keseimbangan antara kedua metrik tersebut. F1-score dapat dihitung dengan rumus: $$  \frac{2 \times Precision  \times Recall}{Precision + Recall}$$
 
 - Mean Average Precision (mAP): Metrik ini digunakan untuk mengukur akurasi model dalam memprediksi lokasi objek secara tepat. mAP dihitung dengan memperhitungkan nilai IOU (Intersection over Union) antara prediksi dan ground truth pada berbagai threshold IOU yang berbeda. Secara matematis mAP dapat dinyatakan sebagai berikut:
+
 $$ m A P=\frac{1}{C} \sum_{c=1}^C A P_c $$
 
 dengan
