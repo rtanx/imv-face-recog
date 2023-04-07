@@ -1,19 +1,3 @@
-<html>
-<head>
-<style>
-    h1{
-        font-weight: bold;
-    }
-    h2{
-        font-weight: bold;
-    }
-    h3{
-        font-weight: bold;
-    }
-</style>
-</head>
-</html>
-
 <h1 style='text-align: center'> Object Detection  </h1>
 
 ![TensorFlow][tensorflow-badge]
