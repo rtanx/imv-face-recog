@@ -28,30 +28,41 @@ Deteksi objek digunakan dalam berbagai aplikasi, seperti pengawasan lalu lintas,
 Ada beberapa metode yang umum digunakan dalam object detection, antara lain yaitu:
 
 1. <b>Region-based Convolutional Neural Networks (R-CNN)</b>: R-CNN adalah pendekatan yang populer dalam object detection. Pendekatan ini membagi gambar menjadi beberapa wilayah dan setiap wilayah dianalisis menggunakan algoritma deep learning yang terpisah untuk mengenali objek. Metode ini kemudian menggabungkan hasil dari semua wilayah untuk menghasilkan lokasi dan label objek.
-
-<center> <img src="docs/assets/rcnn.jpeg" width="500" > </center>
+<p align="center">
+    <img src="docs/assets/rcnn.jpeg" width="500" > 
+</p>
 
 2. <b>Single Shot Detector (SSD)</b>: SSD adalah metode yang memungkinkan objek untuk dideteksi dalam satu jangkauan dengan model jaringan tunggal. Pendekatan ini menggabungkan tiga jaringan convolutional network dengan resolusi yang berbeda untuk mendeteksi objek pada berbagai skala.
 
-<center> <img src="docs/assets/ssd.png" width="500" > </center>
+<p align="center">
+    <img src="docs/assets/ssd.png" width="500" > 
+</p>
 
 3. <b>You Only Look Once (YOLO)</b>: YOLO adalah metode object detection real-time yang membagi gambar menjadi beberapa grid cell dan memprediksi lokasi dan label objek untuk setiap grid cell. Pendekatan ini menggabungkan deteksi objek dan klasifikasi dalam satu jaringan neural, sehingga sangat efisien dan cepat.
 
-<center> <img src="docs/assets/yolo.png" width="500" > </center>
+<p align="center"> 
+    <img src="docs/assets/yolo.png" width="500" >
+</p>
 
 4. <b>Faster R-CNN</b>: Faster R-CNN adalah pengembangan dari R-CNN yang menggunakan jaringan neural untuk mempercepat proses proposal wilayah. Pendekatan ini menghasilkan kemampuan deteksi yang lebih cepat dan lebih akurat.
 
-<center> <img src="docs/assets/faster-rcnn.jpeg" width="500" > </center>
+<p align="center"> 
+    <img src="docs/assets/faster-rcnn.jpeg" width="500" >
+</p>
 
 5. <b>RetinaNet</b>: RetinaNet adalah metode yang menggunakan struktur jaringan neural yang mirip dengan SSD. Namun, pendekatan ini menggunakan struktur khusus yang memungkinkan model untuk mengidentifikasi objek pada skala yang berbeda dengan lebih akurat.
 
-<center> <img src="docs/assets/retinanet.jpeg" width="500" > </center>
+<p align="center"> 
+    <img src="docs/assets/retinanet.jpeg" width="500">
+</p>
 
 Semua metode di atas dapat diimplementasikan dengan menggunakan berbagai framework machine learning seperti TensorFlow, PyTorch, atau Caffe. Metode object detection yang dipilih tergantung pada aplikasi dan data yang digunakan.
 
 # Data Preparation
 
-<center> <img src="https://blog.roboflow.com/content/images/size/w2000/2020/12/labeling.small-1.gif"> </center>
+<p align="center"> 
+    <img src="https://blog.roboflow.com/content/images/size/w2000/2020/12/labeling.small-1.gif"> 
+</p>
 
 Data preparation adalah tahap penting dalam machine learning dan deep learning, di mana data disiapkan dan diproses sebelum dimasukkan ke dalam model. Tujuan dari data preparation adalah untuk menghasilkan dataset yang berkualitas tinggi dan representatif yang dapat meningkatkan performa dan akurasi model.
 
@@ -74,7 +85,9 @@ YOLO (You Only Look Once) adalah salah satu arsitektur deteksi objek real-time y
 
 YOLOv8 (You Only Look Once version 8)  menggunakan pendekatan single-shot detector, yang berarti bahwa objek dapat dideteksi dalam satu tahap, tanpa perlu tahap deteksi lanjutan.
 
-<center> <img src="docs/assets/yolo-arch.jpeg" height="600" > </center>
+<p align="center"> 
+    <img src="docs/assets/yolo-arch.jpeg" height="600" > 
+</p>
 
 Berikut adalah beberapa fitur utama dari arsitektur YOLOv8:
 
@@ -100,7 +113,9 @@ Untuk melakukan pengukuran performa pada model YOLOv8, terdapat beberapa metrik 
 
 - Recall: Metrik ini mengukur seberapa banyak objek yang berhasil dideteksi oleh model. Recall dapat dihitung dengan rumus: $$ \frac{TP}{TP + FN} $$ dimana $FN$ (False Negative) adalah jumlah deteksi yang salah negatif.
 
-<center> <img src="docs/assets/recall.png" height="600" > </center>
+<p align="center"> 
+    <img src="docs/assets/recall.png" height="600" > 
+</p>
 
 
 - F1-score: Metrik ini merupakan perpaduan antara precision dan recall, dan dapat digunakan untuk mengukur keseimbangan antara kedua metrik tersebut. F1-score dapat dihitung dengan rumus: $$  \frac{2 \times Precision  \times Recall}{Precision + Recall}$$
