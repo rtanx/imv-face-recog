@@ -149,6 +149,7 @@ Metrik-metrik ini dapat digunakan untuk melakukan evaluasi performa pada model Y
 
 ## Source Code
 + <a href='https://colab.research.google.com/drive/1sL5WMRb3szUIAt5MvAiVh8__nYl6g788#scrollTo=6shdAlbyqxDU'> Face Detection Cafia </a>
++ <a href='https://github.com/rtanx/imv-face-recog/tree/main/model'> Trained Model dan Source Code Realtime </a>
 
 ## Referensi
 
