@@ -53,7 +53,7 @@ Ada beberapa metode yang umum digunakan dalam object detection, antara lain yait
 5. <b>RetinaNet</b>: RetinaNet adalah metode yang menggunakan struktur jaringan neural yang mirip dengan SSD. Namun, pendekatan ini menggunakan struktur khusus yang memungkinkan model untuk mengidentifikasi objek pada skala yang berbeda dengan lebih akurat.
 
 <p align="center"> 
-    <img src="docs/assets/retinanet.jpeg" width="500">
+    <img src="docs/assets/retinanet.png" width="500">
 </p>
 
 Semua metode di atas dapat diimplementasikan dengan menggunakan berbagai framework machine learning seperti TensorFlow, PyTorch, atau Caffe. Metode object detection yang dipilih tergantung pada aplikasi dan data yang digunakan.
