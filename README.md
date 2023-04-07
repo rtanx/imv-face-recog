@@ -74,3 +74,8 @@ Data preparation membutuhkan waktu dan sumber daya yang cukup untuk diproses den
 
 [img1]: docs/assets/object_detection_algo.jpg
 [img2]: docs/assets/rcnn.jpeg
+
+### Referensi 
++ https://github.com/ultralytics/ultralytics
++ https://cocodataset.org/#detection-eval
++ https://becominghuman.ai/understanding-anchors-backbone-of-object-detection-using-yolo-54962f00fbbb
