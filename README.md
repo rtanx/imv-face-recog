@@ -111,14 +111,14 @@ Untuk melakukan pengukuran performa pada model YOLOv8, terdapat beberapa metrik 
 
 - Precision: Metrik ini mengukur seberapa akurat model dalam menentukan objek yang benar positif. Precision dapat dihitung dengan rumus: $$\frac{TP}{TP + FP}$$, dimana $TP$ (True Positive)  adalah jumlah deteksi yang benar positif dan $FP$ (False Positive) adalah jumlah deteksi yang salah positif.
 
-- Recall: Metrik ini mengukur seberapa banyak objek yang berhasil dideteksi oleh model. Recall dapat dihitung dengan rumus: $$ \frac{TP}{TP + FN} $$ dimana $FN$ (False Negative) adalah jumlah deteksi yang salah negatif.
+- Recall: Metrik ini mengukur seberapa banyak objek yang berhasil dideteksi oleh model. Recall dapat dihitung dengan rumus: $$\frac{TP}{TP + FN}$$ dimana $FN$ (False Negative) adalah jumlah deteksi yang salah negatif.
 
 <p align="center"> 
     <img src="docs/assets/recall.png" height="600" > 
 </p>
 
 
-- F1-score: Metrik ini merupakan perpaduan antara precision dan recall, dan dapat digunakan untuk mengukur keseimbangan antara kedua metrik tersebut. F1-score dapat dihitung dengan rumus: $$  \frac{2 \times Precision  \times Recall}{Precision + Recall}$$
+- F1-score: Metrik ini merupakan perpaduan antara precision dan recall, dan dapat digunakan untuk mengukur keseimbangan antara kedua metrik tersebut. F1-score dapat dihitung dengan rumus: $$\frac{2 \times Precision  \times Recall}{Precision + Recall}$$
 
 - Mean Average Precision (mAP): Metrik ini digunakan untuk mengukur akurasi model dalam memprediksi lokasi objek secara tepat. mAP dihitung dengan memperhitungkan nilai IOU (Intersection over Union) antara prediksi dan ground truth pada berbagai threshold IOU yang berbeda. Secara matematis mAP dapat dinyatakan sebagai berikut:
 
