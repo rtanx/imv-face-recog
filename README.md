@@ -68,6 +68,57 @@ Beberapa tahap dalam data preparation meliputi:
 
 Data preparation membutuhkan waktu dan sumber daya yang cukup untuk diproses dengan benar, tetapi sangat penting untuk memastikan kualitas dan performa model yang baik.
 
+## Model Architecture
+YOLO (You Only Look Once) adalah salah satu arsitektur deteksi objek real-time yang paling populer digunakan, dan pada pelatihan ini juga kita menggunakan YOLO versi 8.
+
+YOLOv8 (You Only Look Once version 8)  menggunakan pendekatan single-shot detector, yang berarti bahwa objek dapat dideteksi dalam satu tahap, tanpa perlu tahap deteksi lanjutan.
+
+<center> <img src="docs/assets/yolo-arch.jpeg" height="600" > </center>
+
+Berikut adalah beberapa fitur utama dari arsitektur YOLOv8:
+
+ - **Backbone**: YOLOv8 menggunakan model ResNet-152 sebagai backbone-nya, yaitu model CNN yang dirancang untuk memberikan keseimbangan yang baik antara kecepatan dan akurasi untuk memperoses suatu jaringan konvolusi yang telah terlatih untuk mengenali fitur-fitur umum pada gambar.
+
+- **Deteksi multi-skala**: YOLOv8 menggunakan teknik deteksi multi-skala untuk meningkatkan akurasi deteksi. Teknik ini melibatkan penggunaan beberapa ukuran input gambar saat melakukan deteksi, sehingga memungkinkan model untuk lebih baik dalam mendeteksi objek dengan ukuran yang berbeda-beda.
+
+- **FPN**: YOLOv8 menggunakan Fitur Pyramid Network (FPN) untuk menggabungkan fitur-fitur yang dihasilkan oleh berbagai layer CNN dalam deteksi objek. FPN dapat meningkatkan akurasi deteksi dengan menghasilkan representasi fitur yang lebih kaya dan detail.
+
+- **Augmentasi data**: YOLOv8 menggunakan augmentasi data untuk meningkatkan jumlah data pelatihan dan mengurangi overfitting. Teknik augmentasi data ini meliputi rotasi, flipping, dan pergeseran gambar.
+
+- **Training**: YOLOv8 menggunakan teknik transfer learning dan pre-training pada ImageNet untuk mengoptimalkan model pada tugas deteksi objek.
+
+- **Optimizer**: YOLOv8 menggunakan optimisasi AdamW untuk mempercepat konvergensi dan meningkatkan akurasi model.
+
+Secara keseluruhan, arsitektur YOLOv8 memiliki kinerja yang sangat baik dalam deteksi objek, dan dapat digunakan pada berbagai aplikasi seperti deteksi kendaraan, deteksi orang, dan sebagainya.
+
+## Model Metrics & Measurement
+
+Untuk melakukan pengukuran performa pada model YOLOv8, terdapat beberapa metrik yang dapat digunakan, antara lain:
+
+- Precision: Metrik ini mengukur seberapa akurat model dalam menentukan objek yang benar positif. Precision dapat dihitung dengan rumus: $$\frac{TP}{TP + FP}$$, dimana $TP$ (True Positive)  adalah jumlah deteksi yang benar positif dan $FP$ (False Positive) adalah jumlah deteksi yang salah positif.
+
+- Recall: Metrik ini mengukur seberapa banyak objek yang berhasil dideteksi oleh model. Recall dapat dihitung dengan rumus: $$ \frac{TP}{TP + FN} $$ dimana $FN$ (False Negative) adalah jumlah deteksi yang salah negatif.
+
+<center> <img src="docs/assets/recall.png" height="600" > </center>
+
+
+- F1-score: Metrik ini merupakan perpaduan antara precision dan recall, dan dapat digunakan untuk mengukur keseimbangan antara kedua metrik tersebut. F1-score dapat dihitung dengan rumus: $$  \frac{2 \times Precision  \times Recall}{Precision + Recall}$$
+
+- Mean Average Precision (mAP): Metrik ini digunakan untuk mengukur akurasi model dalam memprediksi lokasi objek secara tepat. mAP dihitung dengan memperhitungkan nilai IOU (Intersection over Union) antara prediksi dan ground truth pada berbagai threshold IOU yang berbeda. Secara matematis mAP dapat dinyatakan sebagai berikut:
+$$ m A P=\frac{1}{C} \sum_{c=1}^C A P_c $$
+dimana
+$$
+\begin{aligned}
+&A P=\sum_{n=0}^N\left(R_{n+1}-R_n\right) P_{\text {interp }}\left(R_n+1\right)\\
+&P_{\text {interp }}\left(R_{n+1}\right)=\max _{\widetilde{R}: \widetilde{R} \geq R_{n+1}} P(\widetilde{R}) .
+\end{aligned}
+$$
+C merupakan jumlah kelas objek dan N merupakan jumlah semua titik interpolasi nilai P terhadap nilai R.
+
+- Inference time: Metrik ini mengukur waktu yang diperlukan oleh model untuk memproses satu gambar dan menghasilkan deteksi. Inference time sangat penting untuk aplikasi real-time yang membutuhkan deteksi objek yang cepat.
+
+Metrik-metrik ini dapat digunakan untuk melakukan evaluasi performa pada model YOLOv5, baik pada saat pelatihan maupun pada saat inferensi. Semakin tinggi nilai precision, recall, dan F1-score, serta mAP, semakin baik kinerja model tersebut. Sedangkan semakin rendah waktu inferensi, semakin cepat model tersebut dalam mendeteksi objek.
+
 <!-- REF -->
 [tensorflow-badge]: https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white
 [pytorch-badge]: https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white
