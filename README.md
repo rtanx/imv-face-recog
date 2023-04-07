@@ -26,13 +26,26 @@ Ada beberapa metode yang umum digunakan dalam object detection, antara lain yait
 
 1. Region-based Convolutional Neural Networks (R-CNN): R-CNN adalah pendekatan yang populer dalam object detection. Pendekatan ini membagi gambar menjadi beberapa wilayah dan setiap wilayah dianalisis menggunakan algoritma deep learning yang terpisah untuk mengenali objek. Metode ini kemudian menggabungkan hasil dari semua wilayah untuk menghasilkan lokasi dan label objek.
 
+<center> <img src="docs/assets/rcnn.jpeg" width="500" > </center>
+
 2. Single Shot Detector (SSD): SSD adalah metode yang memungkinkan objek untuk dideteksi dalam satu jangkauan dengan model jaringan tunggal. Pendekatan ini menggabungkan tiga jaringan convolutional network dengan resolusi yang berbeda untuk mendeteksi objek pada berbagai skala.
+
+<center> <img src="docs/assets/ssd.png" width="500" > </center>
 
 3. You Only Look Once (YOLO): YOLO adalah metode object detection real-time yang membagi gambar menjadi beberapa grid cell dan memprediksi lokasi dan label objek untuk setiap grid cell. Pendekatan ini menggabungkan deteksi objek dan klasifikasi dalam satu jaringan neural, sehingga sangat efisien dan cepat.
 
+<center> <img src="docs/assets/yolo.png" width="500" > </center>
+
+
 4. Faster R-CNN: Faster R-CNN adalah pengembangan dari R-CNN yang menggunakan jaringan neural untuk mempercepat proses proposal wilayah. Pendekatan ini menghasilkan kemampuan deteksi yang lebih cepat dan lebih akurat.
 
+<center> <img src="docs/assets/faster-rcnn.jpeg" width="500" > </center>
+
+
 5. RetinaNet: RetinaNet adalah metode yang menggunakan struktur jaringan neural yang mirip dengan SSD. Namun, pendekatan ini menggunakan struktur khusus yang memungkinkan model untuk mengidentifikasi objek pada skala yang berbeda dengan lebih akurat.
+
+<center> <img src="docs/assets/retinanet.jpeg" width="500" > </center>
+
 
 Semua metode di atas dapat diimplementasikan dengan menggunakan berbagai framework machine learning seperti TensorFlow, PyTorch, atau Caffe. Metode object detection yang dipilih tergantung pada aplikasi dan data yang digunakan.
 
@@ -41,3 +54,4 @@ Semua metode di atas dapat diimplementasikan dengan menggunakan berbagai framewo
 [pytorch-badge]: https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white
 
 [img1]: docs/assets/object_detection_algo.jpg
+[img2]: docs/assets/rcnn.jpeg
