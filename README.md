@@ -107,13 +107,15 @@ Untuk melakukan pengukuran performa pada model YOLOv8, terdapat beberapa metrik 
 
 - Mean Average Precision (mAP): Metrik ini digunakan untuk mengukur akurasi model dalam memprediksi lokasi objek secara tepat. mAP dihitung dengan memperhitungkan nilai IOU (Intersection over Union) antara prediksi dan ground truth pada berbagai threshold IOU yang berbeda. Secara matematis mAP dapat dinyatakan sebagai berikut:
 $$ m A P=\frac{1}{C} \sum_{c=1}^C A P_c $$
+
+dengan
+
+$$A P=\sum_{n=0}^N\left(R_{n+1}-R_n\right) P_{\text {interp }}\left(R_n+1\right)$$
+
+
+$$ P_{\text {interp }}\left(R_{n+1}\right)=\max _{\tilde{R}: \widetilde{R} \geq R_{n+1}} P(\widetilde{R}) $$
+
 dimana
-$$
-\begin{aligned}
-&A P=\sum_{n=0}^N\left(R_{n+1}-R_n\right) P_{\text {interp }}\left(R_n+1\right)\\
-&P_{\text {interp }}\left(R_{n+1}\right)=\max _{\widetilde{R}: \widetilde{R} \geq R_{n+1}} P(\widetilde{R}) .
-\end{aligned}
-$$
 C merupakan jumlah kelas objek dan N merupakan jumlah semua titik interpolasi nilai P terhadap nilai R.
 
 - Inference time: Metrik ini mengukur waktu yang diperlukan oleh model untuk memproses satu gambar dan menghasilkan deteksi. Inference time sangat penting untuk aplikasi real-time yang membutuhkan deteksi objek yang cepat.
